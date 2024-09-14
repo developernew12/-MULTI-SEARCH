@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Assets/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Dark Mode</span>
+        <span class="toggle-label"></span>
+    </div>      
+    <div class="main-container">
+        <div class="heading">
+            <h1>Multi Search</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="query" placeholder="Type Your Query">
+            <button id="voice-command-btn">🎙️</button>
+            <button id="searchbtn">Search</button>
+        </div>
+        <div class="search-engines">
+            <select name="" id="search-engine">
+                <option value="google">Google</option>
+                <option value="wikipedia">Wikipedia</option>
+                <option value="gemini">Gemini</option>
+                <option value="giphy">Giphy</option>
+                
+            </select>
+        </div>
+        <div id="loader" class="animate__animated animate__fadeOut" style="display: none;">
+            <p>Loading...</p>
+        </div>
+        <div id="results"></div>
+        <div id="pagination-controls"></div>
+    </div>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script type="module" src="./scripts.js"></script>
+</body>
+</html>
